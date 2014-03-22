@@ -21,20 +21,13 @@
   padding: 0;
 }
 
-html, body { height: 100%; }
-
 body {
   background-color: #FFF;
-  font: 13.34px "CodeProDemoRegular", Helvetica, Arial, sans-serif;
-  font-size: small;
-  text-align: center;
+  font-family: "CodeProDemoRegular", Helvetica, Arial, sans-serif;
   color: #000;
+  line-height: 1.1;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
-
-h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
 a         { color: #C2172A; }
@@ -51,16 +44,15 @@ a.fa:hover      { color: #C2172A; }
 /*****************************************************************************/
 .posts {
   list-style-type: none;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .posts li {
-  line-height: 1.75em;
+  line-height: 1.60em;
 }
 
 .posts span {
   color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
 }
 
@@ -70,71 +62,18 @@ a.fa:hover      { color: #C2172A; }
 /*
 /*****************************************************************************/
 
-.container {
-  font-size: 115%;
-  text-align: justify;
-  width: 800px;
-/*  margin: 3em auto 2em;*/
-/*  line-height: 1.5em;
-*/}
-
 .header a {
   font-weight: bold;
   text-decoration: none;
 }
 
 .title {
-  display: inline-block;
   margin-bottom: 0px;
-  font-size: 600%;
-}
-
-.title a {
-  color: #C2172A;;
-}
-
-.header a.extra {
-  color: #aaa;
-  margin-left: 1em;
-}
-
-.header a.extra:hover {
-  color: #000;
-}
-
-.meta {
-  color: #aaa;
+  font-size: 9em;
 }
 
 .welcome {
-  font-size: 250%;
-}
-
-/*.footer {
-  font-size: 80%;
-  color: #666;
-  border-top: 4px solid #eee;
-  margin-top: 2em;
-  overflow: hidden;
-}*/
-
-.footer .contact {
-  float: left;
-  margin-right: 3em;
-}
-
-.footer .contact a {
-  color: #8085C1;
-}
-
-.footer .rss {
-  margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right;
-}
-
-.footer .rss img {
-  border: 0;
+  font-size: 7em;
 }
 
 /*****************************************************************************/
@@ -187,6 +126,42 @@ a.fa:hover      { color: #C2172A; }
   padding: 5px;
 }
 
-.fa {
-  margin: 0px 15px 0px 15px;
+@media (min-width: 992px) {
+  .container {
+    width: 940px;
+  }
 }
+
+@media only screen and (max-width: 320px) {
+  .title {
+    font-size: 3.0em;
+  }
+
+  .welcome-text {
+    font-size: 30%;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  .title {
+    font-size: 3.5em;
+  }
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .title {
+    font-size: 5.0em;
+  }
+}
+
+@media only screen and (min-width: 769px) and (min-width : 1024px) {
+  .title {
+    font-size: 9.0em;
+  }
+}
+
+.welcome-text {
+  margin-top: 0px;
+}
+

@@ -1,27 +1,29 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Davewalk.net
 ---
 
 <div id="home">
-	<div class="welcome">
-		<h1>Hi, I'm Dave Walk. I make data-driven web applications and APIs using open source technologies like JavaScript and Python.</h1>
+	<div class="welcome row">
+		<div class="col-md-12">
+			<h1 class="welcome-text">Hi, I'm Dave Walk. I make data-driven web applications and APIs using open source technologies like JavaScript and Python.</h1>
+		</div>
 	</div>
-  <h1>Latest Blog Posts</h1>
+  <h3>Latest Blog Posts</h3>
   <ul class="posts">
     {% for post in site.posts %}
       <li><span>{{ post.date | date: "%b %d %Y" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
-  <h1>I am currently looking for new projects, so please get in touch!</h1>
+  <h3>I am currently looking for new projects so please get in touch!</h3>
 
   <div class="row">
-	<div><a class="col-md-1 fa fa-github fa-5x" href="http://github.com/davewalk"></a></div>
-	<div><a class="col-md-1 fa fa-twitter fa-5x" href="http://twitter.com/ddw17"></a></div>
-	<div><a class="col-md-1 fa fa-envelope fa-5x" href="mailto:daviddwalk@gmail.com"></a></div>
-	<div><a class="col-md-1 fa fa-rss-square fa-5x" href="/"></a></div>
-	<div><a class="col-md-1 fa fa-linkedin fa-5x" href="linkedin.com/in/daviddwalk"></a></div>
-	<div><a class="col-md-1 fa fa-google-plus fa-5x" href="https://plus.google.com/+DaveWalk"></a></div>
-	<div><a class="col-md-1 fa fa-instagram fa-5x" href="http://instagram.com/ddw17"></a></div>
+	<div><a class="col-md-1 col-xs-4 fa fa-github fa-5x" href="http://github.com/davewalk"></a></div>
+	<div><a class="col-md-1 col-xs-4 fa fa-twitter fa-5x" href="http://twitter.com/ddw17"></a></div>
+	<div><a class="col-md-1 col-xs-4 fa fa-envelope fa-5x" href="mailto:daviddwalk@gmail.com"></a></div>
+	<div><a class="col-md-1 col-xs-4 fa fa-rss-square fa-5x" href="/"></a></div>
+	<div><a class="col-md-1 col-xs-4 fa fa-linkedin fa-5x" href="linkedin.com/in/daviddwalk"></a></div>
+	<div><a class="col-md-1 col-xs-4 fa fa-google-plus fa-5x" href="https://plus.google.com/+DaveWalk"></a></div>
+	<div><a class="col-md-1 col-xs-4 fa fa-instagram fa-5x" href="http://instagram.com/ddw17"></a></div>
 </div>
 </div>
