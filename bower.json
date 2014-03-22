@@ -13,5 +13,8 @@
     "**/.*",
     "node_modules",
     "vendor"
-  ]
+  ],
+  "dependencies": {
+    "font-awesome": "~4.0.3"
+  }
 }
