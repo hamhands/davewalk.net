@@ -6,6 +6,13 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
+        <!-- vendor CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/syntax.css">
 
@@ -15,30 +22,20 @@
     </head>
     <body>
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
+        <div class="site container">
+          <div class="header row">
+            <div class="col-md-1 col-xs-1">
+              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+            </div>
           </div>
 
           {{ content }}
 
           <div class="footer">
-            <div class="contact">
-              <p>
-                Dave Walk<br />
-                Software Developer<br />
-                daviddwalk@gmail.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/davewalk">github.com/davewalk</a><br />
-                <a href="https://twitter.com/ddw17">twitter.com/ddw17</a><br />
-              </p>
-            </div>
+            {% include footer.html %}
           </div>
         </div>
 
+      <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     </body>
 </html>
