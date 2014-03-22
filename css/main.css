@@ -70,11 +70,11 @@ a.fa:hover      { color: #C2172A; }
 /*
 /*****************************************************************************/
 
-.site {
+.container {
   font-size: 115%;
   text-align: justify;
   width: 800px;
-  margin: 3em auto 2em;
+/*  margin: 3em auto 2em;*/
 /*  line-height: 1.5em;
 */}
 
@@ -176,6 +176,11 @@ a.fa:hover      { color: #C2172A; }
 
 .post pre.terminal code {
   background-color: #333;
+}
+
+.post-title {
+  font-size: 200%;
+  padding-top: 10px;
 }
 
 .btn-social-media {
