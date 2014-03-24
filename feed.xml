@@ -7,6 +7,19 @@
 		<atom:link href="http://davewalk.net/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>New Website</title>
+				<description>&lt;p&gt;Welcome to the new davewalk.net! This website could be considered version 3.0 of this tiny little place for myself on the Internet. Version 1 was a Drupal website (horrible idea although I learned some valuable lessons). Version 2 was a &lt;a href=&quot;https://github.com/rigoneri/syte&quot;&gt;Syte&lt;/a&gt; (still viewable, for now, &lt;a href=&quot;http://davewalk.herokuapp.com/&quot;&gt;here&lt;/a&gt;) website that while being an awesome idea, didn&amp;#39;t really work for me because of slow page loads due to API calls to the Tumblr and search engine issues.&lt;/p&gt;
+
+&lt;p&gt;What you&amp;#39;re looking at now is a static &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; website hosted on GitHub Pages which I believe will make it super simple to keep this website up-to-date. Blog posts are markdown files that I can write and preview in Sublime Text. I can create &lt;a href=&quot;https://github.com/davewalk/davewalk.net/issues&quot;&gt;Issues&lt;/a&gt; to remind myself of blog post ideas. And each blog post has a link at the bottom to the actual markdown file in the GitHub repo in case a reader wants to correct me on something. Yes, I agree that this probably won&amp;#39;t be done very often.&lt;/p&gt;
+
+&lt;p&gt;There&amp;#39;s still more to do too; I have to create a projects page to showcase the things I&amp;#39;ve worked on recently and a dedicated blog posts page with tags. I&amp;#39;m also going to make more of an effort to write new blog posts more often so check back soon!&lt;/p&gt;
+</description>
+				<pubDate>Sun, 23 Mar 2014 21:00:00 +0000</pubDate>
+				<link>http://davewalk.net/2014/03/23/new-website.html</link>
+				<guid isPermaLink="true">http://davewalk.net/2014/03/23/new-website.html</guid>
+			</item>
+		
+			<item>
 				<title>Philly Hoods</title>
 				<description>&lt;p&gt;Today I’m releasing &lt;a href=&quot;http://phillyhoods.net/&quot;&gt;Philly Hoods&lt;/a&gt;, a
 neighborhoods API for Philadelphia. For now it’s pretty simple: give it
