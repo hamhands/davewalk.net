@@ -4,4 +4,3 @@ url: http://davewalk.net
 markdown: redcarpet
 pygments: true
 permalink: /:year/:month/:day/:title.html
-baseurl: /davewalk.net
