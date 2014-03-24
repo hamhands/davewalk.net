@@ -1,4 +1,6 @@
 name: DAVEWALK.NET
+description: The website of software developer Dave Walk
+url: http://davewalk.net
 markdown: redcarpet
 pygments: true
 permalink: /:year/:month/:day/:title.html
