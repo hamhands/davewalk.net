@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Philly Hoods</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <!-- vendor CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+        <div class="container">
+          <div class="header row">
+            <div class="col-md-12">
+              <span class="title">
+                <a href="/">DAVEWALK.NET</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="post-title">Philly Hoods</div>
+<p class="meta">Sep 09 2013</p>
+
+<div class="post">
+<p>Today I’m releasing <a href="http://phillyhoods.net/">Philly Hoods</a>, a
+neighborhoods API for Philadelphia. For now it’s pretty simple: give it
+a pair of coordinates in Philadelphia and it’ll tell you what
+neighborhood you’re in and give you a GeoJSON representation of the
+neighborhood polygon. Or, pass a string and it’ll try to match one or
+more neighborhoods to it. Check out <a href="http://phillyhoods.net/">the docs</a>
+for more information and a demo. <a href="https://github.com/davewalk/philly-hoods">The code’s on
+GitHub</a>.</p>
+
+<p>It’s a simple project but it was fun to do and like all my side projects
+it gave me a chance to mess around with some new technology for the
+first time:</p>
+
+<p><strong>Node.js</strong>: This is my first project in production using Node. I’ve been
+messing with it for a while on some larger things (some still in the
+works) but it’s good to get something out the door. Again, I’m not
+really doing anything crazy here, I’m using callbacks, I haven’t yet
+gotten into the promises and all of the more advanced stuff. But I think
+Node is ideal for writing APIs and will continue to look to it in the
+future for that.</p>
+
+<p>I decided to go with <a href="http://mcavage.me/node-restify/">Restify</a> over
+Express for writing the API and I’m really glad I did. It’s designed
+specifically from writing RESTful APIs so it does a lot of the work for
+you or makes other things easy with built-in Bunyan support for logging,
+throttling and a few other small things that were helpful.</p>
+
+<p><strong>PostgreSQL and PostGIS</strong>: This is one that I’ve been wanting to dig into
+for some time. It’s a database that I’ve messed with but never had to
+work with from front to end on a project. It took me a while to figure
+out to convert and insert the polygons into a table from a shapefile but
+eventually I got it. Once you get the hang of the spatial queries that
+you can do with PostGIS you realize that the possibilities are pretty
+much endless. It’s kind of addictive. Definitely be using PostGIS again
+in the future if a need something spatial.</p>
+
+<p><strong>OpenShift</strong>: I’ve used Heroku as a PaaS before, but never
+<a href="https://www.openshift.com/">OpenShift</a>. I think the two of them are
+pretty similar from a workflow point of view (deploying from a
+<code>git push</code>, what a beautiful thing). What I liked about OpenShift is
+that you can actually SSH in to your gear (like a dyno) to get a better
+sense of how it works. Some people probably prefer to keep the platform
+as a black box but I like the flexibility to poke around a little bit if
+I want to. Heroku on the other hand probably has a smoother command line
+API to get stuff done but OpenShift isn’t too far behind. Another
+appealing feature of OpenShift is <a href="https://www.openshift.com/wiki/installing-openshift-origin-using-vagrant-and-puppet">OpenShift
+Origins</a>
+which appears to be a way to run a local copy of the OpenShift platform
+for development. This could be a better way to get a local environment
+close to what will be run in production than the Vagrant path that I
+went for this project. Origins is also how you go about developing your
+own “cartridges” (or “add-ons” in Heroku-speak) that you can use on the
+platform and even share with others. Open source FTW.</p>
+
+<p>Yeah, so that’s about it. I’m excited to see how (and if!) people use
+this API. I’ve heard folks in the past talk about how something like
+this would be helpful, so we’ll see.</p>
+
+<p>Now on to the next project...</p>
+
+
+<a href="http://github.com/davewalk/davewalk.net/tree/master/_posts/2013-09-09-philly-hoods.md">Send a pull request for this post on GitHub.</a>
+</div>
+
+
+          <div class="footer">
+            <p>Copyright &copy; 2014 Dave Walk</p>
+          </div>
+        </div>
+    </body>
+</html>

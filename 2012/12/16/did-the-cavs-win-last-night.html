@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Did The Cavs Win Last Night?</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <!-- vendor CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+        <div class="container">
+          <div class="header row">
+            <div class="col-md-12">
+              <span class="title">
+                <a href="/">DAVEWALK.NET</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="post-title">Did The Cavs Win Last Night?</div>
+<p class="meta">Dec 16 2012</p>
+
+<div class="post">
+<p><em>March 2014 Update: This app is currently broken due to Twitter&#39;s API requiring authentication. I hope to bring it back and better than ever for the 2014-2015 season.</em></p>
+
+<p>Yesterday I finished up a little web app that I’ve been working on
+over the last few weeks when I got a chance: <a href="http://www.didthecavswinlastnight.net">Did The Cavs Win Last
+Night?</a> A while back I came
+across <a href="http://isthereagiantsgametoday.com/">Is there a Giants game
+today?</a> and thought it was a great
+idea in its simplicity. I’m definitely a fan of one-purpose single-page
+apps because they can be really good at the very one thing that they are
+trying to do.</p>
+
+<p>So I created something similar for the NBA that not only tells you when
+the next game is, but tells you if your team won the night before. And
+not only that, but it’ll give you fresh stories and videos about the
+game. I envisioned folks waking up the day after a game to see how their
+team did the night before. In the past I maybe went to NBA.com or
+ESPN.com to get the score and some single wrap-up, but now with this app
+it’s possible to get a bunch of viewpoints in one place.</p>
+
+<p><img src="http://www.didthecavswinlastnight.net/screenshot.png" alt="image"></p>
+
+<p>The app is entirely static. When a user accesses it it checks if there
+was a game yesterday by calling a JSON file of the team’s schedule. If
+there was, it’ll ask the Twitter account
+<a href="http://www.twitter.com/SimpleNBAScores">@SimpleNBAScores</a> for the
+score. It then pulls up stories from blogs and websites and videos on
+Youtube about the game to give a more complete view of what happened and
+what people are saying about it.</p>
+
+<p>It was fun to make and it gave me a chance to try out a few new things
+like: media queries (pretty simple since this was one column), Canvas
+(just one element but quadratic curves can be tricky) and
+<a href="http://www.yeoman.io">Yeoman</a>, which I can’t live without now. I also
+have it hosted on S3, which is new to me but was pretty easy and working
+well so far. Deploying through their web client is a pain, but I think
+I’ll try to make a command line application that streamlines that a bit.</p>
+
+<p>While planning this project I did a lot of research into how I can get
+sports scores on the client-side and basically there are none besides
+that Twitter account. ESPN has an API, but the general public isn’t
+given access to scores and you need a key anyway so it wouldn’t work on
+the client. All other APIs for sports info are paid. There is one way
+person that found a ESPN live score stream and he created RSS feeds to
+scrap it, but I couldn’t make jQuery GET requests to it. So there’s
+almost nothing, which is strange to me because sports scores are so
+ubiquitous. You’d think that it would be in the NBA’s best interest to
+put out a robust API, why not, but I guess there’s too much money at
+stake. For now I’ll have to use the Twitter feed even though it’s using
+a depreciated non-auth version of the API. If that goes down I’ll
+probably have to create my own API that all version of Did The… can use.</p>
+
+<p>Anyway, I hope people find it useful. <a href="https://github.com/davewalk/did-the-nba-team-win-last-night">The code is on
+GitHub</a> and
+I’ve included instructions on how to setup it up for other teams.
+Hopefully folks will fork it and deploy a version of their team!</p>
+
+
+<a href="http://github.com/davewalk/davewalk.net/tree/master/_posts/2012-12-16-did-the-cavs-win-last-night.md">Send a pull request for this post on GitHub.</a>
+</div>
+
+
+          <div class="footer">
+            <p>Copyright &copy; 2014 Dave Walk</p>
+          </div>
+        </div>
+    </body>
+</html>

@@ -1,21 +1,500 @@
----
-layout: none
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>{{ site.name | xml_escape }}</title>
-		<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>		
-		<link>{{ site.url }}</link>
-		<atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
-		{% for post in site.posts limit:15 %}
+		<title>DAVEWALK.NET</title>
+		<description>The website of software developer Dave Walk</description>		
+		<link>http://davewalk.net</link>
+		<atom:link href="http://davewalk.net/feed.xml" rel="self" type="application/rss+xml" />
+		
 			<item>
-				<title>{{ post.title | xml_escape }}</title>
-				<description>{{ post.content | xml_escape }}</description>
-				<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-				<link>{{ site.url }}{{ post.url }}</link>
-				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+				<title>Philly Hoods</title>
+				<description>&lt;p&gt;Today I’m releasing &lt;a href=&quot;http://phillyhoods.net/&quot;&gt;Philly Hoods&lt;/a&gt;, a
+neighborhoods API for Philadelphia. For now it’s pretty simple: give it
+a pair of coordinates in Philadelphia and it’ll tell you what
+neighborhood you’re in and give you a GeoJSON representation of the
+neighborhood polygon. Or, pass a string and it’ll try to match one or
+more neighborhoods to it. Check out &lt;a href=&quot;http://phillyhoods.net/&quot;&gt;the docs&lt;/a&gt;
+for more information and a demo. &lt;a href=&quot;https://github.com/davewalk/philly-hoods&quot;&gt;The code’s on
+GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It’s a simple project but it was fun to do and like all my side projects
+it gave me a chance to mess around with some new technology for the
+first time:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Node.js&lt;/strong&gt;: This is my first project in production using Node. I’ve been
+messing with it for a while on some larger things (some still in the
+works) but it’s good to get something out the door. Again, I’m not
+really doing anything crazy here, I’m using callbacks, I haven’t yet
+gotten into the promises and all of the more advanced stuff. But I think
+Node is ideal for writing APIs and will continue to look to it in the
+future for that.&lt;/p&gt;
+
+&lt;p&gt;I decided to go with &lt;a href=&quot;http://mcavage.me/node-restify/&quot;&gt;Restify&lt;/a&gt; over
+Express for writing the API and I’m really glad I did. It’s designed
+specifically from writing RESTful APIs so it does a lot of the work for
+you or makes other things easy with built-in Bunyan support for logging,
+throttling and a few other small things that were helpful.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;PostgreSQL and PostGIS&lt;/strong&gt;: This is one that I’ve been wanting to dig into
+for some time. It’s a database that I’ve messed with but never had to
+work with from front to end on a project. It took me a while to figure
+out to convert and insert the polygons into a table from a shapefile but
+eventually I got it. Once you get the hang of the spatial queries that
+you can do with PostGIS you realize that the possibilities are pretty
+much endless. It’s kind of addictive. Definitely be using PostGIS again
+in the future if a need something spatial.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OpenShift&lt;/strong&gt;: I’ve used Heroku as a PaaS before, but never
+&lt;a href=&quot;https://www.openshift.com/&quot;&gt;OpenShift&lt;/a&gt;. I think the two of them are
+pretty similar from a workflow point of view (deploying from a
+&lt;code&gt;git push&lt;/code&gt;, what a beautiful thing). What I liked about OpenShift is
+that you can actually SSH in to your gear (like a dyno) to get a better
+sense of how it works. Some people probably prefer to keep the platform
+as a black box but I like the flexibility to poke around a little bit if
+I want to. Heroku on the other hand probably has a smoother command line
+API to get stuff done but OpenShift isn’t too far behind. Another
+appealing feature of OpenShift is &lt;a href=&quot;https://www.openshift.com/wiki/installing-openshift-origin-using-vagrant-and-puppet&quot;&gt;OpenShift
+Origins&lt;/a&gt;
+which appears to be a way to run a local copy of the OpenShift platform
+for development. This could be a better way to get a local environment
+close to what will be run in production than the Vagrant path that I
+went for this project. Origins is also how you go about developing your
+own “cartridges” (or “add-ons” in Heroku-speak) that you can use on the
+platform and even share with others. Open source FTW.&lt;/p&gt;
+
+&lt;p&gt;Yeah, so that’s about it. I’m excited to see how (and if!) people use
+this API. I’ve heard folks in the past talk about how something like
+this would be helpful, so we’ll see.&lt;/p&gt;
+
+&lt;p&gt;Now on to the next project...&lt;/p&gt;
+</description>
+				<pubDate>Mon, 09 Sep 2013 08:40:00 +0000</pubDate>
+				<link>http://davewalk.net/2013/09/09/philly-hoods.html</link>
+				<guid isPermaLink="true">http://davewalk.net/2013/09/09/philly-hoods.html</guid>
 			</item>
-		{% endfor %}
+		
+			<item>
+				<title>2013-2014 NBA Schedule</title>
+				<description>&lt;p&gt;Last week I pushed to GitHub &lt;a href=&quot;https://github.com/davewalk/2013-2014-nba-schedule&quot;&gt;a repo of the 2013-2014 NBA
+Schedule&lt;/a&gt; by team in
+JSON and CSV formats. The schedules were announced a few days earlier
+and at the time they weren’t available anywhere to download. So I
+created a few Python scripts that scraped the schedule from ESPN.com and
+included information about where each game would be played, including
+coordinates geocoded from the Google Maps API.&lt;/p&gt;
+
+&lt;p&gt;Not entirely sure why I did this! Well, I’m a total basketball nerd for
+one. And I was annoyed that the data wasn’t available in a format that
+it could easily be used. Since then basketball-reference.com and the
+team sites on nba.com have included CSV downloads, but the formatting
+differs from team-to-team and sometimes game times are in the local time
+of the team, which is annoying. But my repo is standardized and would be
+useful if you were making a NBA app. And &lt;a href=&quot;https://github.com/davewalk/did-the-nba-team-win-last-night&quot;&gt;I happen to have
+one&lt;/a&gt; that
+is due for a re-write for the next season.&lt;/p&gt;
+
+&lt;p&gt;Storing shareable, scraped, static data (the three S’s!) on GitHub has
+me thinking of what else I can do. What’s stopping me from updating
+these schedules weekly with results once the season starts? What about
+scraping ALL of the data for each game? Why not? Storage is free and
+once I write the script it would be a snap to update.&lt;/p&gt;
+
+&lt;p&gt;I’ll have to think about this as the season approaches. In the meantime
+hopefully someone comes across this repo out of the millions on GitHub
+and finds it useful.&lt;/p&gt;
+</description>
+				<pubDate>Tue, 13 Aug 2013 14:23:26 +0000</pubDate>
+				<link>http://davewalk.net/2013/08/13/2013-2014-nba-schedule.html</link>
+				<guid isPermaLink="true">http://davewalk.net/2013/08/13/2013-2014-nba-schedule.html</guid>
+			</item>
+		
+			<item>
+				<title>ArcConsole</title>
+				<description>&lt;p&gt;I just released something that I’ve been working on recently:
+&lt;a href=&quot;https://github.com/CityOfPhiladelphia/arc-console&quot; title=&quot;ArcConsole on GitHub&quot;&gt;ArcConsole&lt;/a&gt;.
+&lt;a href=&quot;http://arc-console.s3-website-us-east-1.amazonaws.com/&quot; title=&quot;ArcConsole Demo&quot;&gt;Check out a
+demo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It’s a simplified, intuitive API console for the ArcGIS REST API. It
+uses awesome JavaScript libraries like Backbone, Backbone Forms, Chosen,
+Bootstrap, Leaflet and Leaflet Draw to take some of the pain out of
+querying data from the standard ArcGIS REST API.&lt;/p&gt;
+
+&lt;p&gt;The ArcGIS REST API is really powerful and the City of Philadelphia
+(which I work for) is using it more in our open data efforts. We’ve got
+some big time datasets on it like all of the Police Dept’s Part I crimes
+since the beginning of 2006 and the Office of Property Assessments’
+recent actual value initiative which set new values for almost every
+property in the city. But, it can be frustrating for developers and
+other users that are new to querying the API to get started. This
+application attempts to make that on-boarding a bit easier by stripping
+away some of the advanced features that we don’t see being used very
+often. If the user needs those advanced features, like non-Web Mercator
+spatial references, they can use the standard API console at any time.
+But with this application the user doesn’t have to navigate to the
+service and layer that they need, they just select the data set that
+they want from the top drop-down and the rest of the parameters and the
+application constructs the URL for them. There’s a static JSON file that
+defines all of those endpoints and additional information like a
+description and links to metadata can be included as well. Plus the
+ability to draw the geometry that you want to query on instead of the
+frustration of trying to the object string just right is a big step up
+in my opinion.&lt;/p&gt;
+
+&lt;p&gt;The app’s still a work in progress and we’ll look to improve it over
+time. With some server-side code, it could be extended into a full-blown
+data extractor. There’s a lot still to do and you can check out the code
+at the City of Philadelphia’s GitHub page.&lt;/p&gt;
+
+&lt;p&gt;Adding a repo to the &lt;a href=&quot;https://github.com/CityOfPhiladelphia&quot; title=&quot;City of Philadelphia on GitHub&quot;&gt;official City of Philadelphia GitHub
+page&lt;/a&gt;
+was especially satisfying for me. The City of Philadelphia is on GitHub.
+And I have some of my code in it. How cool is that?&lt;/p&gt;
+</description>
+				<pubDate>Mon, 25 Mar 2013 20:50:08 +0000</pubDate>
+				<link>http://davewalk.net/2013/03/25/arcconsole.html</link>
+				<guid isPermaLink="true">http://davewalk.net/2013/03/25/arcconsole.html</guid>
+			</item>
+		
+			<item>
+				<title>PHL Crime Mapper Post Mortem</title>
+				<description>&lt;p&gt;It’s been a little over a week since I released &lt;a href=&quot;http://www.phlcrimemapper.com&quot;&gt;PHL Crime
+Mapper&lt;/a&gt; and the response has been beyond
+my wildest dreams. Here’s a few select quotes that made me proud:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.philebrity.com/2013/01/14/theres-an-app-for-that-phl-crime-mapper/&quot;&gt;&amp;quot;…a handy
+tool…&amp;quot;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.philly.com/philly/news/breaking/New_website_gives_easiest_look_yet_at_Philly_crimes_by_neighborhood.html&quot;&gt;&amp;quot;…gives easiest look yet at crimes by
+neighborhood&amp;quot;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://technicallyphilly.com/2013/01/15/phl-crime-mapper-app&quot;&gt;&amp;quot;…wins points for
+simplicity…&amp;quot;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blogs.phillymag.com/the_philly_post/2013/01/15/phl-crime-mapper-documents-citys-pain/&quot;&gt;&amp;quot;…nifty…&amp;quot;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.newsworks.org/index.php/local//onward/49541-phl-crime-mapper-open-data-in-action&quot;&gt;&amp;quot;…handy interface for seeing where serious crimes are being
+committed.&amp;quot;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/greenperspectiv/status/291251453278949376&quot;&gt;&amp;quot;…crisp, easy to use…the simplicity and refinement of design is
+excellent.&amp;quot;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://philadelphia.cbslocal.com/2013/01/20/philadelphias-serious-crime-database-gets-makeover/&quot;&gt;I was even on the radio to talk about
+it!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I like seeing words like “handy” and “simplicity” because that’s
+definitely what I was going for. The app strives to do one thing and
+hopefully do it well.&lt;/p&gt;
+
+&lt;p&gt;I also got a lot of feedback by email from community leaders and others
+about how they found the app useful. I didn’t think of it before, but
+this would be really helpful for community organizations and
+neighborhood watch groups. I’ll have to think about ways to get the word
+out to them in the future. Overall so far I’ve gotten a lot of feedback
+that has solidified how I should move the development forward.&lt;/p&gt;
+
+&lt;p&gt;A few things have been identified that need improvement. Some users had
+issues with using the application in so far as drawing an area and
+changing the date range. So tonight I added a “Draw” button to the black
+box on the left that explains how to use the app. In the process I
+actually decreased the height of that box by removing some copy from the
+last sentence. So that’s good.&lt;/p&gt;
+
+&lt;p&gt;The other thing that I have to work on is finding a date selector that
+is easy to use. I really like the &lt;a href=&quot;http://ghusse.github.com/jQRangeSlider/&quot;&gt;current
+one&lt;/a&gt; but I’ve actually
+witnessed myself a few people having trouble figuring out how it works.
+I may find a different one (although I hate the calendar picker ones) or
+at least put a hover over the slider that explains how to use it.&lt;/p&gt;
+
+&lt;p&gt;Beyond that I’ve thought about some long term bigger additions that
+could really make the app awesome. I also have to work on making sure
+the codebase remains maintainable by using Backbone and maybe porting
+the JavaScript to CoffeeScript. I’ve never used CoffeeScript before so
+this would be a good way to learn.&lt;/p&gt;
+
+&lt;p&gt;Finally, some closing stats:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  30% of visits from mobile devices (including tablets). This number
+was a bit surprising to me, but it shouldn’t be. There was a mobile
+version but a healthy amount of these hits were on tablets, which
+the app currently doesn’t support at all, which has been been
+driving me crazy. I have to spend some time soon adding that
+support.&lt;/li&gt;
+&lt;li&gt;  The app was viewed in 46 states and 54 countries (whoa)!&lt;/li&gt;
+&lt;li&gt;  Internet Explorer, Chrome and Safari split 70% of the traffic down
+the middle, Firefox got 16% and a bucketful of other browsers got
+the rest. Great to see Internet Explorer not in the lead.&lt;/li&gt;
+&lt;li&gt;  Most toggled crime: Thefts. Which makes sense because there are so
+many of them.&lt;/li&gt;
+&lt;li&gt;  &lt;a href=&quot;http://www.philly.com/philly/news/breaking/New_website_gives_easiest_look_yet_at_Philly_crimes_by_neighborhood.html&quot;&gt;The Philly.com
+article&lt;/a&gt;
+accounted for about 63% of traffic, which is amazing. Interestingly
+enough, a fifth of that came in through the mobile version of their
+website.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The traffic has died down, so now it’s time to get back to work on
+making the application better long term.&lt;/p&gt;
+</description>
+				<pubDate>Tue, 22 Jan 2013 00:22:00 +0000</pubDate>
+				<link>http://davewalk.net/2013/01/22/phl-crime-mapper-post-mortem.html</link>
+				<guid isPermaLink="true">http://davewalk.net/2013/01/22/phl-crime-mapper-post-mortem.html</guid>
+			</item>
+		
+			<item>
+				<title>PHL Crime Mapper</title>
+				<description>&lt;p&gt;Last month the &lt;a href=&quot;http://opendataphilly.org/opendata/resource/215/philadelphia-police-part-one-crime-incidents/&quot;&gt;City of Philadelphia released
+data&lt;/a&gt;
+on Part I (violent and serious property) crimes over the last six years.
+Today I’m releasing a web application that uses that data to help folks
+visualize these crimes in their area: &lt;a href=&quot;http://www.phlcrimemapper.com/&quot;&gt;PHL Crime
+Mapper&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;On a computer (non-mobile device), the application allows users to
+select a time frame and draw a polygon around the area that they want to
+view the crimes for. They can then toggle on/off different types of
+crimes and can always change their data range or start over again.&lt;/p&gt;
+
+&lt;p&gt;On a smartphone, users select either a 3, 5 or 10 block search area
+(approximate) around their location. A tablet version is coming soon,
+for now the app should be pretty worthless on iPads and the like. It was
+important to me that there was a version of this app that worked on
+smartphones and that it was just not the desktop version shrunken down.&lt;/p&gt;
+
+&lt;p&gt;The ultimate vision with this is to allow users to select the region
+they want to know about and get a text or email alert weekly/monthly of
+all the new crimes in that area. It’ll take some time to get there, but
+I think the app really becomes useful at that point.&lt;/p&gt;
+
+&lt;p&gt;I showed this to my friends over the weekend and one of them asked what
+the objective is. I don’t really have one and I don’t know how people
+will use it specifically. If they’re like me they’ll draw a polygon
+around their house to view the recent crimes in their neighborhood.
+Perhaps they’ll change the data range to see how crimes have changed
+over time. To me the more you know the better, especially when it comes
+to crime in your city and the Police Department thankfully releasing
+this data lets it to happen.&lt;/p&gt;
+
+&lt;p&gt;It was fun working on this project and I’m pleased with the results for
+now although there are some UX and loading time improvements that have
+to be made. This was the first time that I got to work with
+&lt;a href=&quot;http://leafletjs.com/&quot;&gt;Leaflet&lt;/a&gt; extensively, which is 100% awesome.
+There were a few steps along the way where I thought that I would be
+stuck because Leaflet has a smaller API than other client-side mapping
+libraries, but it always had the perfect solution. Where Leaflet cannot
+offer the functionality there are some great plugins that give you more,
+including the awesome &lt;a href=&quot;https://github.com/jacobtoye/Leaflet.draw&quot;&gt;Leaflet
+Draw&lt;/a&gt; that I am using here. I
+may have to post again later about Leaflet. I have always been a fan of
+the ‘Toner’ basemap from &lt;a href=&quot;http://maps.stamen.com/#toner/11/40.0020/-75.1180&quot;&gt;Stamen
+Design&lt;/a&gt; and I finally
+get to use it here. Overall the app is pretty fast once it’s initially
+loaded, due to the fast Esri REST server that I’m calling for the data
+(and geometry services) from and the markers being &lt;a href=&quot;http://fortawesome.github.com/Font-Awesome/&quot;&gt;Font
+Awesome&lt;/a&gt; CSS sprites.&lt;/p&gt;
+
+&lt;p&gt;I hope folks find this useful. &lt;a href=&quot;https://github.com/davewalk/phl-crime-mapper&quot;&gt;The code is up on
+GitHub&lt;/a&gt; and pull requests
+and new issues are welcome. It’ll be interesting to see how people use
+it and I’m definitely open to making changes to make it more useful and
+easier to use.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 14 Jan 2013 07:33:00 +0000</pubDate>
+				<link>http://davewalk.net/2013/01/14/phl-crime-mapper.html</link>
+				<guid isPermaLink="true">http://davewalk.net/2013/01/14/phl-crime-mapper.html</guid>
+			</item>
+		
+			<item>
+				<title>Know When To Go To Sleep</title>
+				<description>&lt;p&gt;Recently I’ve been working on some side projects late into the night. If
+I don’t have any commitments on a weekend I may stay up late working on
+something and then sleep in the next day. Because I can, and it’s
+awesome.&lt;/p&gt;
+
+&lt;p&gt;But I also have to learn when it’s time to stop and &lt;a href=&quot;http://youtu.be/CseO1XRYs9I&quot;&gt;go the f**k to
+sleep&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A few nights ago I was working on one of these projects and got stuck on
+one thing that wasn’t working even though I KNEW it should have been.
+After struggling and trying to debug for 45 minutes, I gave up,
+commented my battle in the code and went to bed.&lt;/p&gt;
+
+&lt;p&gt;Tonight I came back to that code and fixed my problem in less than a
+minute. It made so much sense that I had a function call inside a loop
+when it shouldn’t have been. With a clear head I caught the mistake
+almost instantaneously, but a few nights before I toiled away forever to
+no avail, cursing computers the whole time.&lt;/p&gt;
+
+&lt;p&gt;The same thing just happened to me tonight: some parameter in a POST
+request isn’t working and it’s not working even though it SHOULD BE. So
+for now I’ll just go to sleep, dream of successful Ajax calls and come
+back to it when the sun is up.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 05 Jan 2013 01:09:07 +0000</pubDate>
+				<link>http://davewalk.net/2013/01/05/know-when-to-go-to-sleep.html</link>
+				<guid isPermaLink="true">http://davewalk.net/2013/01/05/know-when-to-go-to-sleep.html</guid>
+			</item>
+		
+			<item>
+				<title>My 2013 New Year's resolutions</title>
+				<description>&lt;p&gt;It’s about that time again, isn’t it? For the past few years I’ve
+tried to make and keep a list of New Year’s Resolutions. Problem is that
+I’ve been changing my blogging platform so much that I can never link
+back to review it a year later. Here’s to hoping this time is different.&lt;/p&gt;
+
+&lt;p&gt;2012 was an awesome year for me, probably the best of my life. Here’s
+what happened to me this year:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt; Got married&lt;/li&gt;
+&lt;li&gt; Got a great job that I really enjoy&lt;/li&gt;
+&lt;li&gt; Got to visit Paris, London and Brussels on our honeymoon. The first
+time I’ve ever been outside of the United States&lt;/li&gt;
+&lt;li&gt; Got my Master’s Degree (pending, but I’m done with classes)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;While all of this was awesome, it’s all stuff that I &lt;em&gt;knew&lt;/em&gt; was going to
+happen and was already planning for in 2011. The challenge in 2013 is to
+keep the momentum going after getting a lot of the big life things done.
+So here’s what I’m shooting for in 2013.&lt;/p&gt;
+
+&lt;h3&gt;Skills&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt; &lt;strong&gt;Learn HTML5 and the mobile web&lt;/strong&gt;. I’ve started this already and
+it’s clearly where the future of technology is going. A sub-goal
+here is that every app I launch this year will look great on
+smartphones, tablets and traditional desktops and a majority of them
+will be designed for mobile first.&lt;/li&gt;
+&lt;li&gt; &lt;strong&gt;Learn Android&lt;/strong&gt;. Yeah yeah, you can make more money in iOS, but
+Android is going to continue to spread like a disease. Long term
+this is a really good skill to have. Measurement: release at least
+one app in the Google Play store. I’ve already got pretty solid
+ideas for three, I just have to wrap my mind around how it all fits
+together.&lt;/li&gt;
+&lt;li&gt; &lt;strong&gt;Learn functional programming by the way of Scala&lt;/strong&gt;. I’ve started
+this already by beginning the &lt;a href=&quot;https://www.coursera.org/course/progfun&quot;&gt;Coursera’s Scala
+class&lt;/a&gt;. How awesome is it
+to learn a programming language from its creator?! End goal: write
+one substantial application in Scala.&lt;/li&gt;
+&lt;li&gt; &lt;strong&gt;Contribute to at least 3-5 open source projects&lt;/strong&gt;. This could be
+creating and maintaining something that others find useful or having
+pull requests accepted for other projects.&lt;/li&gt;
+&lt;li&gt; &lt;strong&gt;Attend five hackathons&lt;/strong&gt;. They’re a good way to stretch yourself,
+code as a team under pressure and learn from others.&lt;/li&gt;
+&lt;li&gt; &lt;strong&gt;Learn D3.js&lt;/strong&gt;. Like really learn it, not just make a few bar
+charts. Make something cool. At least five original, substantial
+data visualizations.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Personal&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt; &lt;strong&gt;Run 750 miles&lt;/strong&gt;. In 2010 I ran 1,000 miles, but I wasn’t able to
+replicate that in 2011 due to injuries and just a lack of free time.
+It’s not the energy that’s the problem but devoting 10+ hours a week
+to running can be challenging. But 750 miles is a pretty healthy
+number.&lt;/li&gt;
+&lt;li&gt; &lt;strong&gt;Less distractions&lt;/strong&gt;. I’m constantly swamped in Google Reader like
+it’s my job. I’ll have to make some subscription cuts to get my
+unread count down and maybe sometimes “Mark all as read” button.
+Also, cancel my magazine subscriptions (Wired and Fast Company).
+There just isn’t enough time in the day to read everything I want to
+read and I have to get used to that.&lt;/li&gt;
+&lt;li&gt; &lt;strong&gt;Read 12 books&lt;/strong&gt;. In 2010 (man, I had free time in 2010) I read 24
+books, which isn’t insane, just two books a month. While devoting
+time to the above I think I can manage one book a month. Hopefully
+more fiction than technology books to give myself a break.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Self Quantification&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt; &lt;strong&gt;Get back onto Daytum&lt;/strong&gt;. In the second half of 2011 I sort of fell
+off with Daytum which I was putting a lot of data into every day. In
+2013 I resolve to be more dedicated to it, but not for everything
+but only the important stuff. Also, I’ll work towards visualizing
+the large dataset that I currently have about myself.&lt;/li&gt;
+&lt;li&gt; &lt;strong&gt;Write five days a week in 750 Words&lt;/strong&gt;. Writing in a journal helps
+me reflect, especially at the beginning of end of a day.&lt;/li&gt;
+&lt;li&gt; &lt;strong&gt;Use at least one passive logging technique&lt;/strong&gt;.
+&lt;a href=&quot;https://github.com/gurgeh/selfspy&quot;&gt;Selfspy&lt;/a&gt; looks interesting.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And that’s about it. Some of this kind of scares me, but I guess that’s
+the point. I doubt that anyone will find this interesting, but I have to
+put this list out publicly to motivate myself to get to work. I’ll check
+back in the beginning of 2014.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 31 Dec 2012 18:37:00 +0000</pubDate>
+				<link>http://davewalk.net/2012/12/31/my-2013-new-years-resolutions.html</link>
+				<guid isPermaLink="true">http://davewalk.net/2012/12/31/my-2013-new-years-resolutions.html</guid>
+			</item>
+		
+			<item>
+				<title>Did The Cavs Win Last Night?</title>
+				<description>&lt;p&gt;&lt;em&gt;March 2014 Update: This app is currently broken due to Twitter&amp;#39;s API requiring authentication. I hope to bring it back and better than ever for the 2014-2015 season.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Yesterday I finished up a little web app that I’ve been working on
+over the last few weeks when I got a chance: &lt;a href=&quot;http://www.didthecavswinlastnight.net&quot;&gt;Did The Cavs Win Last
+Night?&lt;/a&gt; A while back I came
+across &lt;a href=&quot;http://isthereagiantsgametoday.com/&quot;&gt;Is there a Giants game
+today?&lt;/a&gt; and thought it was a great
+idea in its simplicity. I’m definitely a fan of one-purpose single-page
+apps because they can be really good at the very one thing that they are
+trying to do.&lt;/p&gt;
+
+&lt;p&gt;So I created something similar for the NBA that not only tells you when
+the next game is, but tells you if your team won the night before. And
+not only that, but it’ll give you fresh stories and videos about the
+game. I envisioned folks waking up the day after a game to see how their
+team did the night before. In the past I maybe went to NBA.com or
+ESPN.com to get the score and some single wrap-up, but now with this app
+it’s possible to get a bunch of viewpoints in one place.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.didthecavswinlastnight.net/screenshot.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;The app is entirely static. When a user accesses it it checks if there
+was a game yesterday by calling a JSON file of the team’s schedule. If
+there was, it’ll ask the Twitter account
+&lt;a href=&quot;http://www.twitter.com/SimpleNBAScores&quot;&gt;@SimpleNBAScores&lt;/a&gt; for the
+score. It then pulls up stories from blogs and websites and videos on
+Youtube about the game to give a more complete view of what happened and
+what people are saying about it.&lt;/p&gt;
+
+&lt;p&gt;It was fun to make and it gave me a chance to try out a few new things
+like: media queries (pretty simple since this was one column), Canvas
+(just one element but quadratic curves can be tricky) and
+&lt;a href=&quot;http://www.yeoman.io&quot;&gt;Yeoman&lt;/a&gt;, which I can’t live without now. I also
+have it hosted on S3, which is new to me but was pretty easy and working
+well so far. Deploying through their web client is a pain, but I think
+I’ll try to make a command line application that streamlines that a bit.&lt;/p&gt;
+
+&lt;p&gt;While planning this project I did a lot of research into how I can get
+sports scores on the client-side and basically there are none besides
+that Twitter account. ESPN has an API, but the general public isn’t
+given access to scores and you need a key anyway so it wouldn’t work on
+the client. All other APIs for sports info are paid. There is one way
+person that found a ESPN live score stream and he created RSS feeds to
+scrap it, but I couldn’t make jQuery GET requests to it. So there’s
+almost nothing, which is strange to me because sports scores are so
+ubiquitous. You’d think that it would be in the NBA’s best interest to
+put out a robust API, why not, but I guess there’s too much money at
+stake. For now I’ll have to use the Twitter feed even though it’s using
+a depreciated non-auth version of the API. If that goes down I’ll
+probably have to create my own API that all version of Did The… can use.&lt;/p&gt;
+
+&lt;p&gt;Anyway, I hope people find it useful. &lt;a href=&quot;https://github.com/davewalk/did-the-nba-team-win-last-night&quot;&gt;The code is on
+GitHub&lt;/a&gt; and
+I’ve included instructions on how to setup it up for other teams.
+Hopefully folks will fork it and deploy a version of their team!&lt;/p&gt;
+</description>
+				<pubDate>Sun, 16 Dec 2012 11:05:00 +0000</pubDate>
+				<link>http://davewalk.net/2012/12/16/did-the-cavs-win-last-night.html</link>
+				<guid isPermaLink="true">http://davewalk.net/2012/12/16/did-the-cavs-win-last-night.html</guid>
+			</item>
+		
 	</channel>
 </rss>

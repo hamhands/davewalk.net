@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>ArcConsole</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <!-- vendor CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+        <div class="container">
+          <div class="header row">
+            <div class="col-md-12">
+              <span class="title">
+                <a href="/">DAVEWALK.NET</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="post-title">ArcConsole</div>
+<p class="meta">Mar 25 2013</p>
+
+<div class="post">
+<p>I just released something that I’ve been working on recently:
+<a href="https://github.com/CityOfPhiladelphia/arc-console" title="ArcConsole on GitHub">ArcConsole</a>.
+<a href="http://arc-console.s3-website-us-east-1.amazonaws.com/" title="ArcConsole Demo">Check out a
+demo</a>.</p>
+
+<p>It’s a simplified, intuitive API console for the ArcGIS REST API. It
+uses awesome JavaScript libraries like Backbone, Backbone Forms, Chosen,
+Bootstrap, Leaflet and Leaflet Draw to take some of the pain out of
+querying data from the standard ArcGIS REST API.</p>
+
+<p>The ArcGIS REST API is really powerful and the City of Philadelphia
+(which I work for) is using it more in our open data efforts. We’ve got
+some big time datasets on it like all of the Police Dept’s Part I crimes
+since the beginning of 2006 and the Office of Property Assessments’
+recent actual value initiative which set new values for almost every
+property in the city. But, it can be frustrating for developers and
+other users that are new to querying the API to get started. This
+application attempts to make that on-boarding a bit easier by stripping
+away some of the advanced features that we don’t see being used very
+often. If the user needs those advanced features, like non-Web Mercator
+spatial references, they can use the standard API console at any time.
+But with this application the user doesn’t have to navigate to the
+service and layer that they need, they just select the data set that
+they want from the top drop-down and the rest of the parameters and the
+application constructs the URL for them. There’s a static JSON file that
+defines all of those endpoints and additional information like a
+description and links to metadata can be included as well. Plus the
+ability to draw the geometry that you want to query on instead of the
+frustration of trying to the object string just right is a big step up
+in my opinion.</p>
+
+<p>The app’s still a work in progress and we’ll look to improve it over
+time. With some server-side code, it could be extended into a full-blown
+data extractor. There’s a lot still to do and you can check out the code
+at the City of Philadelphia’s GitHub page.</p>
+
+<p>Adding a repo to the <a href="https://github.com/CityOfPhiladelphia" title="City of Philadelphia on GitHub">official City of Philadelphia GitHub
+page</a>
+was especially satisfying for me. The City of Philadelphia is on GitHub.
+And I have some of my code in it. How cool is that?</p>
+
+
+<a href="http://github.com/davewalk/davewalk.net/tree/master/_posts/2013-03-25-arcconsole.md">Send a pull request for this post on GitHub.</a>
+</div>
+
+
+          <div class="footer">
+            <p>Copyright &copy; 2014 Dave Walk</p>
+          </div>
+        </div>
+    </body>
+</html>

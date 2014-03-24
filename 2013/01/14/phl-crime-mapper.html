@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>PHL Crime Mapper</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <!-- vendor CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+        <div class="container">
+          <div class="header row">
+            <div class="col-md-12">
+              <span class="title">
+                <a href="/">DAVEWALK.NET</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="post-title">PHL Crime Mapper</div>
+<p class="meta">Jan 14 2013</p>
+
+<div class="post">
+<p>Last month the <a href="http://opendataphilly.org/opendata/resource/215/philadelphia-police-part-one-crime-incidents/">City of Philadelphia released
+data</a>
+on Part I (violent and serious property) crimes over the last six years.
+Today I’m releasing a web application that uses that data to help folks
+visualize these crimes in their area: <a href="http://www.phlcrimemapper.com/">PHL Crime
+Mapper</a>.</p>
+
+<p>On a computer (non-mobile device), the application allows users to
+select a time frame and draw a polygon around the area that they want to
+view the crimes for. They can then toggle on/off different types of
+crimes and can always change their data range or start over again.</p>
+
+<p>On a smartphone, users select either a 3, 5 or 10 block search area
+(approximate) around their location. A tablet version is coming soon,
+for now the app should be pretty worthless on iPads and the like. It was
+important to me that there was a version of this app that worked on
+smartphones and that it was just not the desktop version shrunken down.</p>
+
+<p>The ultimate vision with this is to allow users to select the region
+they want to know about and get a text or email alert weekly/monthly of
+all the new crimes in that area. It’ll take some time to get there, but
+I think the app really becomes useful at that point.</p>
+
+<p>I showed this to my friends over the weekend and one of them asked what
+the objective is. I don’t really have one and I don’t know how people
+will use it specifically. If they’re like me they’ll draw a polygon
+around their house to view the recent crimes in their neighborhood.
+Perhaps they’ll change the data range to see how crimes have changed
+over time. To me the more you know the better, especially when it comes
+to crime in your city and the Police Department thankfully releasing
+this data lets it to happen.</p>
+
+<p>It was fun working on this project and I’m pleased with the results for
+now although there are some UX and loading time improvements that have
+to be made. This was the first time that I got to work with
+<a href="http://leafletjs.com/">Leaflet</a> extensively, which is 100% awesome.
+There were a few steps along the way where I thought that I would be
+stuck because Leaflet has a smaller API than other client-side mapping
+libraries, but it always had the perfect solution. Where Leaflet cannot
+offer the functionality there are some great plugins that give you more,
+including the awesome <a href="https://github.com/jacobtoye/Leaflet.draw">Leaflet
+Draw</a> that I am using here. I
+may have to post again later about Leaflet. I have always been a fan of
+the ‘Toner’ basemap from <a href="http://maps.stamen.com/#toner/11/40.0020/-75.1180">Stamen
+Design</a> and I finally
+get to use it here. Overall the app is pretty fast once it’s initially
+loaded, due to the fast Esri REST server that I’m calling for the data
+(and geometry services) from and the markers being <a href="http://fortawesome.github.com/Font-Awesome/">Font
+Awesome</a> CSS sprites.</p>
+
+<p>I hope folks find this useful. <a href="https://github.com/davewalk/phl-crime-mapper">The code is up on
+GitHub</a> and pull requests
+and new issues are welcome. It’ll be interesting to see how people use
+it and I’m definitely open to making changes to make it more useful and
+easier to use.</p>
+
+
+<a href="http://github.com/davewalk/davewalk.net/tree/master/_posts/2013-01-14-phl-crime-mapper.md">Send a pull request for this post on GitHub.</a>
+</div>
+
+
+          <div class="footer">
+            <p>Copyright &copy; 2014 Dave Walk</p>
+          </div>
+        </div>
+    </body>
+</html>
