@@ -1,0 +1,27 @@
+- name: PHL Crime Mapper
+  description: 'PHL Crime Mapper allows you to access Philadelphia serious crimes in the area that you care about. Draw your area, pick your data range and become informed.'
+  link: http://phlcrimemapper.com
+  github: https://github.com/PHL-Crime-Mapper/phl-crime-mapper
+  technologies: 'JavaScript, Leaflet'
+
+- name: Philly Hoods
+  description: Philly Hoods is a REST API of neighborhoods in the City of Brotherly Love. Give it either a pair of coordinates or a string and it'll try to give you the resulting neighborhood including GeoJSON of the boundary.
+  link: http://phillyhoods.net
+  github: https://github.com/davewalk/philly-hoods
+  technologies: 'JavaScript (NodeJS), PostgreSQL'
+
+- name: ArcOpen
+  description: "ArcOpen is an ArcGIS Desktop Python toolbox that makes exporting ArcGIS feature classes to open geodata formats (GeoJSON, KML, CSV and shapefile, compressed and uncompressed) a breeze. It'll even create a Markdown README.md file for you from your layer's metadata! We (City of Philadelphia) use it to quickly publish our geodata to GitHub."
+  link: https://github.com/CityOfPhiladelphia/arc-open
+  github: https://github.com/CityOfPhiladelphia/arc-open
+  technologies: Python
+
+- name: ArcConsole
+  description: "ArcConsole is a simple, intuitive client-side console for the ArcGIS Server REST API. It's intended for people not familiar with the ArcGIS REST API or users that want to get their data quickly and move on with their application."
+  link: http://phlapi.com/geoconsole.html
+  github: https://github.com/CityOfPhiladelphia/arc-console
+  technologies: 'JavaScript, BackboneJS'
+
+- name: Various other projects
+  description: "My work at the City of Philadelphia hasn't always resulted in a finished product for the public, but I've got my hands dirty in automating data updating procedures, system architecture, legacy software debugging, optimization, database migrations, GIS, government open data, intranet websites and more that have taught me a great deal."
+  technologies: 'Python, JavaScript, NodeJS'
