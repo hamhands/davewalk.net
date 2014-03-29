@@ -7,6 +7,40 @@
 		<atom:link href="http://davewalk.net/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Famo.us</title>
+				<description>&lt;p&gt;Perhaps you&amp;#39;ve heard of &lt;a href=&quot;http://famo.us&quot;&gt;Famo.us&lt;/a&gt;. They&amp;#39;re a start-up that is developing a super slick rendering engine that can do crazy stuff like the demo on their homepage.  &lt;/p&gt;
+
+&lt;p&gt;They&amp;#39;ve been gathering hype and (and a lot of VC funding) for a while now without a product that developers could use. Their website opens with a form to sign-up for a beta release and there have been some events for the lucky ones in San Francisco. But recently they sent out an email titled &amp;quot;FINALLY&amp;quot; that details the beginning of a public beta rollout on April 9th.  &lt;/p&gt;
+
+&lt;p&gt;This section of the email was very interesting to me:   &lt;/p&gt;
+
+&lt;blockquote&gt;Based on our experience with Hack Reactor students and private beta participants, this timeline is typical:   
+
+&lt;p&gt;30 minutes: You complete the intro lessons in Famo.us University.&lt;/p&gt;  
+
+&lt;p&gt;Hour 2: You build your first app example with physics animations.&lt;/p&gt;
+
+&lt;p&gt;Hour 3: You can learn new techniques by reading Famo.us source code for any of the 40 example app interfaces in our gallery. You can also easily read and understand the reference documentation.&lt;/p&gt;
+
+&lt;p&gt;Then until sunrise: You look through the examples to get inspired. You work all night to build your first app, and it’s awesome.&lt;/p&gt;
+
+&lt;p&gt;1 week: You can build any of the animation example demos, you’ve mastered the concepts of Famo.us, and you’ve submitted some animation demos of your own to the community gallery.&lt;/p&gt;
+
+&lt;p&gt;2 weeks: You feel empowered to begin your own project in earnest with hopes of building an award-winning app.&lt;/p&gt;
+
+&lt;p&gt;1 month: You never look back.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Instead of releasing a rough version of their software, they&amp;#39;ve worked on developer evangelism ahead of time. And through this work they&amp;#39;ve realized and acknowledged that there is a learning curve to their engine and spinned it into a positive. In some fields a challenge can be seen as a feature of a product and not a downside of it.  &lt;/p&gt;
+
+&lt;p&gt;Chances are good I&amp;#39;ll give Famo.us a shot next month. Game on!&lt;/p&gt;
+</description>
+				<pubDate>Sat, 29 Mar 2014 17:18:00 +0000</pubDate>
+				<link>http://davewalk.net/2014/03/29/famous.html</link>
+				<guid isPermaLink="true">http://davewalk.net/2014/03/29/famous.html</guid>
+			</item>
+		
+			<item>
 				<title>Belief, or Why the Chicago Bulls Matter</title>
 				<description>&lt;p&gt;Anyone that knows me knows that I&amp;#39;m a huge NBA fan. You probably aren&amp;#39;t, but stick with me on this one. It makes sense.  &lt;/p&gt;
 
