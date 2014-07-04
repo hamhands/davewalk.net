@@ -7,6 +7,31 @@
 		<atom:link href="http://davewalk.net/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Yo</title>
+				<description>&lt;p&gt;In case you haven&amp;#39;t heard of the &lt;a href=&quot;http://www.justyo.co/&quot;&gt;Yo&lt;/a&gt; app yet, it&amp;#39;s a &amp;quot;single-tap zero character communication tool&amp;quot; available for Android, iOS and Windows Phone. You get a username and with a single tap you can send a &amp;quot;Yo&amp;quot; to another person&amp;#39;s username. That&amp;#39;s it.  &lt;/p&gt;
+
+&lt;p&gt;Stupid, huh? Yet the app &lt;a href=&quot;http://techcrunch.com/2014/06/18/yo-yo/&quot;&gt;took the app stores by storm&lt;/a&gt;, eventually garnering one million users. &lt;a href=&quot;http://venturebeat.com/2014/06/21/six-unbelievable-quotes-about-yo-the-stupid-app-that-raised-1-2m&quot;&gt;It raised a $1.2M in funding&lt;/a&gt;. &lt;a href=&quot;http://www.theguardian.com/technology/2014/jun/20/yo-hacked-as-minimal-app-suddenly-benefits-from-maximum-publicity&quot;&gt;It got hacked&lt;/a&gt;. There was a &lt;a href=&quot;http://techcrunch.com/2014/06/28/yo-hackathon-attempts-to-show-how-yo-can-grow/&quot;&gt;Yo hackathon&lt;/a&gt; with some interesting ideas including &lt;a href=&quot;http://yotheworld.org/&quot;&gt;YOTHEWORLD&lt;/a&gt; which donated the $2,500 they won to a charity.  &lt;/p&gt;
+
+&lt;p&gt;When I first found out about the app I was intrigued, so I signed up and starting Yo&amp;#39;ing with my wife. It was actually kind of fun.  &lt;/p&gt;
+
+&lt;p&gt;But that only lasted so long; I had to try to get some of my friends on it. At the last &lt;a href=&quot;http://tinyletter.actuacom/urbangeekdrinks&quot;&gt;Urban Geek Drinks&lt;/a&gt; I pitched it to a few people I was sitting with in a way that embarrassingly seemed like I was pitching it to investors. Like a lot of people on the internet they seemed to think it was more San Francisco craziness and laughable that they actually raised funding.  &lt;/p&gt;
+
+&lt;p&gt;I managed to get one friend to sign up and later that night when I Yo&amp;#39;ed him his response was &amp;quot;I don&amp;#39;t know what that means!&amp;quot; On Hangouts, of course, because he couldn&amp;#39;t actually communicate that to me on Yo. And I think that is the magical thing about this service: there is no implied meaning to a Yo, it&amp;#39;s all in the context of the relationship and situation between you and the other person.  &lt;/p&gt;
+
+&lt;p&gt;There&amp;#39;s a &lt;a href=&quot;https://medium.com/@YoAppStatus/e7f2f0ec5c3c&quot;&gt;Yo API&lt;/a&gt; that makes it a bit more interesting. When a person Yo&amp;#39;s you they essentially are following you. When you POST to the (only) Yo endpoint you are sending a Yo to all of the people that you have followed you. Essentially this makes this the easiest push notification ever to implement. What if Starbucks Yo&amp;#39;ed you when your coffee was ready, or a restaurant Yo&amp;#39;s you when your table was ready for brunch? How about when there&amp;#39;s a new blog post? Or when your dry cleaning is ready to be picked up? And think about all of the Internet of Things possibilities.  &lt;/p&gt;
+
+&lt;p&gt;You could certainly do the same over Twitter, email or countless other digital communication mediums. But those apps are already used for a different purpose than simple one-action notifications. There are so many email messages that are coming in to everyone&amp;#39;s inbox that even the important ones can be neglected. And not everyone has Twitter or Facebook with the correct notification settings on their phone. Other messaging tools feel more intimate that you wouldn&amp;#39;t want some business or service to have access.  &lt;/p&gt;
+
+&lt;p&gt;Future implementations of Yo or something like it suggest more of a single-purpose app mindset that &lt;a href=&quot;http://techcrunch.com/2014/01/29/one-app-at-a-time&quot;&gt;Facebook is already leaning towards&lt;/a&gt; by either buying the best-in-breed or attempting to clone them (think Instagram and Snapchat).  &lt;/p&gt;
+
+&lt;p&gt;We&amp;#39;ll see where Yo ends up. I haven&amp;#39;t Yo&amp;#39;ed anyone in a while and I may be bored with it any day now. Or, it could lead to something completely different that my friends won&amp;#39;t laugh at. But it&amp;#39;s an interesting idea that I wish I would&amp;#39;ve thought of. Not everything has to &lt;a href=&quot;http://youtu.be/4To3elrrwdI&quot;&gt;make the world a better place&lt;/a&gt;.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 04 Jul 2014 15:23:00 -0400</pubDate>
+				<link>http://davewalk.net/2014/07/04/yo.html</link>
+				<guid isPermaLink="true">http://davewalk.net/2014/07/04/yo.html</guid>
+			</item>
+		
+			<item>
 				<title>Philly Tech Week 2014 Recap</title>
 				<description>&lt;p&gt;The fourth annual Philly Tech Week wrapped up this past weekend and in my opinion it was the best yet. Why do I say this? Because I was exhausted by the end of it. Here&amp;#39;s a recap of the events that I was able to make it out to but there are many more that I missed.  &lt;/p&gt;
 
@@ -52,7 +77,7 @@
 
 &lt;p&gt;I think this is fitting because for a community of people that work and talk on Google Hangout, Twitter, GitHub and other screen interfaces, the week is a great time to get together and hangout. I feel really lucky to not only know a lot of these people that I respect, admire and share a lot of values and interests with, but even call some of them my friends. Until next year!&lt;/p&gt;
 </description>
-				<pubDate>Tue, 15 Apr 2014 20:08:00 +0000</pubDate>
+				<pubDate>Tue, 15 Apr 2014 16:08:00 -0400</pubDate>
 				<link>http://davewalk.net/2014/04/15/philly-tech-week-recap.html</link>
 				<guid isPermaLink="true">http://davewalk.net/2014/04/15/philly-tech-week-recap.html</guid>
 			</item>
@@ -86,7 +111,7 @@
 
 &lt;p&gt;Chances are good I&amp;#39;ll give Famo.us a shot next month. Game on!&lt;/p&gt;
 </description>
-				<pubDate>Sat, 29 Mar 2014 17:18:00 +0000</pubDate>
+				<pubDate>Sat, 29 Mar 2014 13:18:00 -0400</pubDate>
 				<link>http://davewalk.net/2014/03/29/famous.html</link>
 				<guid isPermaLink="true">http://davewalk.net/2014/03/29/famous.html</guid>
 			</item>
@@ -111,7 +136,7 @@
 
 &lt;p&gt;Believing in a goal like the Bulls is something I&amp;#39;m trying to work towards.&lt;/p&gt;
 </description>
-				<pubDate>Tue, 25 Mar 2014 08:23:00 +0000</pubDate>
+				<pubDate>Tue, 25 Mar 2014 04:23:00 -0400</pubDate>
 				<link>http://davewalk.net/2014/03/25/belief-or-why-the-chicago-bulls-matter.html</link>
 				<guid isPermaLink="true">http://davewalk.net/2014/03/25/belief-or-why-the-chicago-bulls-matter.html</guid>
 			</item>
@@ -124,7 +149,7 @@
 
 &lt;p&gt;There&amp;#39;s still more to do too; I have to create a projects page to showcase the things I&amp;#39;ve worked on recently and a dedicated blog posts page with tags. I&amp;#39;m also going to make more of an effort to write new blog posts more often so check back soon!&lt;/p&gt;
 </description>
-				<pubDate>Sun, 23 Mar 2014 21:00:00 +0000</pubDate>
+				<pubDate>Sun, 23 Mar 2014 17:00:00 -0400</pubDate>
 				<link>http://davewalk.net/2014/03/23/new-website.html</link>
 				<guid isPermaLink="true">http://davewalk.net/2014/03/23/new-website.html</guid>
 			</item>
@@ -191,7 +216,7 @@ this would be helpful, so we’ll see.&lt;/p&gt;
 
 &lt;p&gt;Now on to the next project...&lt;/p&gt;
 </description>
-				<pubDate>Mon, 09 Sep 2013 08:40:00 +0000</pubDate>
+				<pubDate>Mon, 09 Sep 2013 04:40:00 -0400</pubDate>
 				<link>http://davewalk.net/2013/09/09/philly-hoods.html</link>
 				<guid isPermaLink="true">http://davewalk.net/2013/09/09/philly-hoods.html</guid>
 			</item>
@@ -226,7 +251,7 @@ once I write the script it would be a snap to update.&lt;/p&gt;
 hopefully someone comes across this repo out of the millions on GitHub
 and finds it useful.&lt;/p&gt;
 </description>
-				<pubDate>Tue, 13 Aug 2013 14:23:26 +0000</pubDate>
+				<pubDate>Tue, 13 Aug 2013 10:23:26 -0400</pubDate>
 				<link>http://davewalk.net/2013/08/13/2013-2014-nba-schedule.html</link>
 				<guid isPermaLink="true">http://davewalk.net/2013/08/13/2013-2014-nba-schedule.html</guid>
 			</item>
@@ -274,7 +299,7 @@ page&lt;/a&gt;
 was especially satisfying for me. The City of Philadelphia is on GitHub.
 And I have some of my code in it. How cool is that?&lt;/p&gt;
 </description>
-				<pubDate>Mon, 25 Mar 2013 20:50:08 +0000</pubDate>
+				<pubDate>Mon, 25 Mar 2013 16:50:08 -0400</pubDate>
 				<link>http://davewalk.net/2013/03/25/arcconsole.html</link>
 				<guid isPermaLink="true">http://davewalk.net/2013/03/25/arcconsole.html</guid>
 			</item>
@@ -361,9 +386,9 @@ website.&lt;/li&gt;
 &lt;p&gt;The traffic has died down, so now it’s time to get back to work on
 making the application better long term.&lt;/p&gt;
 </description>
-				<pubDate>Tue, 22 Jan 2013 00:22:00 +0000</pubDate>
-				<link>http://davewalk.net/2013/01/22/phl-crime-mapper-post-mortem.html</link>
-				<guid isPermaLink="true">http://davewalk.net/2013/01/22/phl-crime-mapper-post-mortem.html</guid>
+				<pubDate>Mon, 21 Jan 2013 19:22:00 -0500</pubDate>
+				<link>http://davewalk.net/2013/01/21/phl-crime-mapper-post-mortem.html</link>
+				<guid isPermaLink="true">http://davewalk.net/2013/01/21/phl-crime-mapper-post-mortem.html</guid>
 			</item>
 		
 			<item>
@@ -424,7 +449,7 @@ and new issues are welcome. It’ll be interesting to see how people use
 it and I’m definitely open to making changes to make it more useful and
 easier to use.&lt;/p&gt;
 </description>
-				<pubDate>Mon, 14 Jan 2013 07:33:00 +0000</pubDate>
+				<pubDate>Mon, 14 Jan 2013 02:33:00 -0500</pubDate>
 				<link>http://davewalk.net/2013/01/14/phl-crime-mapper.html</link>
 				<guid isPermaLink="true">http://davewalk.net/2013/01/14/phl-crime-mapper.html</guid>
 			</item>
@@ -455,13 +480,13 @@ request isn’t working and it’s not working even though it SHOULD BE. So
 for now I’ll just go to sleep, dream of successful Ajax calls and come
 back to it when the sun is up.&lt;/p&gt;
 </description>
-				<pubDate>Sat, 05 Jan 2013 01:09:07 +0000</pubDate>
-				<link>http://davewalk.net/2013/01/05/know-when-to-go-to-sleep.html</link>
-				<guid isPermaLink="true">http://davewalk.net/2013/01/05/know-when-to-go-to-sleep.html</guid>
+				<pubDate>Fri, 04 Jan 2013 20:09:07 -0500</pubDate>
+				<link>http://davewalk.net/2013/01/04/know-when-to-go-to-sleep.html</link>
+				<guid isPermaLink="true">http://davewalk.net/2013/01/04/know-when-to-go-to-sleep.html</guid>
 			</item>
 		
 			<item>
-				<title>My 2013 New Year's resolutions</title>
+				<title>My 2013 New Year&#39;s resolutions</title>
 				<description>&lt;p&gt;It’s about that time again, isn’t it? For the past few years I’ve
 tried to make and keep a list of New Year’s Resolutions. Problem is that
 I’ve been changing my blogging platform so much that I can never link
@@ -551,7 +576,7 @@ the point. I doubt that anyone will find this interesting, but I have to
 put this list out publicly to motivate myself to get to work. I’ll check
 back in the beginning of 2014.&lt;/p&gt;
 </description>
-				<pubDate>Mon, 31 Dec 2012 18:37:00 +0000</pubDate>
+				<pubDate>Mon, 31 Dec 2012 13:37:00 -0500</pubDate>
 				<link>http://davewalk.net/2012/12/31/my-2013-new-years-resolutions.html</link>
 				<guid isPermaLink="true">http://davewalk.net/2012/12/31/my-2013-new-years-resolutions.html</guid>
 			</item>
@@ -614,7 +639,7 @@ GitHub&lt;/a&gt; and
 I’ve included instructions on how to setup it up for other teams.
 Hopefully folks will fork it and deploy a version of their team!&lt;/p&gt;
 </description>
-				<pubDate>Sun, 16 Dec 2012 11:05:00 +0000</pubDate>
+				<pubDate>Sun, 16 Dec 2012 06:05:00 -0500</pubDate>
 				<link>http://davewalk.net/2012/12/16/did-the-cavs-win-last-night.html</link>
 				<guid isPermaLink="true">http://davewalk.net/2012/12/16/did-the-cavs-win-last-night.html</guid>
 			</item>

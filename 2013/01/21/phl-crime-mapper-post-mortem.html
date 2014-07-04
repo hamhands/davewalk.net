@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>PHL Crime Mapper Post Mortem</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <!-- vendor CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+        <div class="container">
+          <div class="header row">
+            <div class="col-md-12">
+              <span class="title">
+                <a href="/">DAVEWALK.NET</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="post-title">PHL Crime Mapper Post Mortem</div>
+<p class="meta">Jan 21 2013</p>
+
+<div class="post">
+<p>It’s been a little over a week since I released <a href="http://www.phlcrimemapper.com">PHL Crime
+Mapper</a> and the response has been beyond
+my wildest dreams. Here’s a few select quotes that made me proud:</p>
+
+<p><a href="http://www.philebrity.com/2013/01/14/theres-an-app-for-that-phl-crime-mapper/">&quot;…a handy
+tool…&quot;</a></p>
+
+<p><a href="http://www.philly.com/philly/news/breaking/New_website_gives_easiest_look_yet_at_Philly_crimes_by_neighborhood.html">&quot;…gives easiest look yet at crimes by
+neighborhood&quot;</a></p>
+
+<p><a href="http://technicallyphilly.com/2013/01/15/phl-crime-mapper-app">&quot;…wins points for
+simplicity…&quot;</a></p>
+
+<p><a href="http://blogs.phillymag.com/the_philly_post/2013/01/15/phl-crime-mapper-documents-citys-pain/">&quot;…nifty…&quot;</a></p>
+
+<p><a href="http://www.newsworks.org/index.php/local//onward/49541-phl-crime-mapper-open-data-in-action">&quot;…handy interface for seeing where serious crimes are being
+committed.&quot;</a></p>
+
+<p><a href="https://twitter.com/greenperspectiv/status/291251453278949376">&quot;…crisp, easy to use…the simplicity and refinement of design is
+excellent.&quot;</a></p>
+
+<p><a href="http://philadelphia.cbslocal.com/2013/01/20/philadelphias-serious-crime-database-gets-makeover/">I was even on the radio to talk about
+it!</a></p>
+
+<p>I like seeing words like “handy” and “simplicity” because that’s
+definitely what I was going for. The app strives to do one thing and
+hopefully do it well.</p>
+
+<p>I also got a lot of feedback by email from community leaders and others
+about how they found the app useful. I didn’t think of it before, but
+this would be really helpful for community organizations and
+neighborhood watch groups. I’ll have to think about ways to get the word
+out to them in the future. Overall so far I’ve gotten a lot of feedback
+that has solidified how I should move the development forward.</p>
+
+<p>A few things have been identified that need improvement. Some users had
+issues with using the application in so far as drawing an area and
+changing the date range. So tonight I added a “Draw” button to the black
+box on the left that explains how to use the app. In the process I
+actually decreased the height of that box by removing some copy from the
+last sentence. So that’s good.</p>
+
+<p>The other thing that I have to work on is finding a date selector that
+is easy to use. I really like the <a href="http://ghusse.github.com/jQRangeSlider/">current
+one</a> but I’ve actually
+witnessed myself a few people having trouble figuring out how it works.
+I may find a different one (although I hate the calendar picker ones) or
+at least put a hover over the slider that explains how to use it.</p>
+
+<p>Beyond that I’ve thought about some long term bigger additions that
+could really make the app awesome. I also have to work on making sure
+the codebase remains maintainable by using Backbone and maybe porting
+the JavaScript to CoffeeScript. I’ve never used CoffeeScript before so
+this would be a good way to learn.</p>
+
+<p>Finally, some closing stats:</p>
+
+<ul>
+<li>  30% of visits from mobile devices (including tablets). This number
+was a bit surprising to me, but it shouldn’t be. There was a mobile
+version but a healthy amount of these hits were on tablets, which
+the app currently doesn’t support at all, which has been been
+driving me crazy. I have to spend some time soon adding that
+support.</li>
+<li>  The app was viewed in 46 states and 54 countries (whoa)!</li>
+<li>  Internet Explorer, Chrome and Safari split 70% of the traffic down
+the middle, Firefox got 16% and a bucketful of other browsers got
+the rest. Great to see Internet Explorer not in the lead.</li>
+<li>  Most toggled crime: Thefts. Which makes sense because there are so
+many of them.</li>
+<li>  <a href="http://www.philly.com/philly/news/breaking/New_website_gives_easiest_look_yet_at_Philly_crimes_by_neighborhood.html">The Philly.com
+article</a>
+accounted for about 63% of traffic, which is amazing. Interestingly
+enough, a fifth of that came in through the mobile version of their
+website.</li>
+</ul>
+
+<p>The traffic has died down, so now it’s time to get back to work on
+making the application better long term.</p>
+
+
+<a href="http://github.com/davewalk/davewalk.net/tree/master/_posts/2013-01-22-phl-crime-mapper-post-mortem.md">Send a pull request for this post on GitHub.</a>
+</div>
+
+
+          <div class="footer">
+            <p>Copyright &copy; 2014 Dave Walk</p>
+          </div>
+        </div>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-23229923-10', 'davewalk.net');
+          ga('send', 'pageview');
+        </script>
+    </body>
+</html>
