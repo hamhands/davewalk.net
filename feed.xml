@@ -12,6 +12,8 @@
 
 &lt;p&gt;Simple, yet useful, to me at least. I sometimes forget to drink as much water as I should and it&amp;#39;s annoying to input into another app. With this app I&amp;#39;m esssentially using Yo as a button with which I can log something. The Android app allows me to create a widget that with one push will send a Yo to username, which is perfect for this. And I think the results page is pretty neat with how the blue fills up the screen with each glass that you drink.  &lt;/p&gt;
 
+&lt;p&gt;It would become more interesting if the app could Yo you back if you haven&amp;#39;t had a glass of water in a configurable period of time. Currently this isn&amp;#39;t possible since there&amp;#39;s no way for the app to ensure that you are the user that you say you are, but if the Yo were to add something like OAuth2 so that users can confirm their identity on the website, I would add reminders as well.  &lt;/p&gt;
+
 &lt;p&gt;Overall a fun little project that took me about six hours to make (most of it on the CSS styling) thanks to Heroku, ExpressJS, Jade and MongoDB. It&amp;#39;ll be interesting to see if anyone uses it.&lt;/p&gt;
 </description>
 				<pubDate>Sun, 20 Jul 2014 13:10:00 -0400</pubDate>
