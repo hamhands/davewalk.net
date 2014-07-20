@@ -7,6 +7,19 @@
 		<atom:link href="http://davewalk.net/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Introducing YOWATER</title>
+				<description>&lt;p&gt;I&amp;#39;m intrigued by the new &amp;quot;social network&amp;quot; Yo, &lt;a href=&quot;/2014/07/04/yo.html&quot;&gt;as I previously wrote about&lt;/a&gt;, and today I finished my first YO app. It&amp;#39;s called &lt;a href=&quot;http://yowater.net&quot;&gt;YOWATER&lt;/a&gt; and it helps you keep track of your water intake. When you drink a glass, send a Yo to &lt;strong&gt;YOWATER&lt;/strong&gt;. To get your intake over the last 24 hours, go to &lt;a href=&quot;http://yowater.net&quot;&gt;yowater.net&lt;/a&gt; and search for your username. Very simple.  &lt;/p&gt;
+
+&lt;p&gt;Simple, yet useful, to me at least. I sometimes forget to drink as much water as I should and it&amp;#39;s annoying to input into another app. With this app I&amp;#39;m esssentially using Yo as a button with which I can log something. The Android app allows me to create a widget that with one push will send a Yo to username, which is perfect for this. And I think the results page is pretty neat with how the blue fills up the screen with each glass that you drink.  &lt;/p&gt;
+
+&lt;p&gt;Overall a fun little project that took me about six hours to make (most of it on the CSS styling) thanks to Heroku, ExpressJS, Jade and MongoDB. It&amp;#39;ll be interesting to see if anyone uses it.&lt;/p&gt;
+</description>
+				<pubDate>Sun, 20 Jul 2014 13:10:00 -0400</pubDate>
+				<link>http://davewalk.net/2014/07/20/introducing-yowater.html</link>
+				<guid isPermaLink="true">http://davewalk.net/2014/07/20/introducing-yowater.html</guid>
+			</item>
+		
+			<item>
 				<title>Yo</title>
 				<description>&lt;p&gt;In case you haven&amp;#39;t heard of the &lt;a href=&quot;http://www.justyo.co/&quot;&gt;Yo&lt;/a&gt; app yet, it&amp;#39;s a &amp;quot;single-tap zero character communication tool&amp;quot; available for Android, iOS and Windows Phone. You get a username and with a single tap you can send a &amp;quot;Yo&amp;quot; to another person&amp;#39;s username. That triggers a push notification on the other person&amp;#39;s phone and a &amp;quot;Yo!&amp;quot; sound effect. That&amp;#39;s it.  &lt;/p&gt;
 
