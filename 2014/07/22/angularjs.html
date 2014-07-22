@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>AngularJS</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <!-- vendor CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+        <div class="container">
+          <div class="header row">
+            <div class="col-md-12">
+              <span class="title">
+                <a href="/">DAVEWALK.NET</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="post-title">AngularJS</div>
+<p class="meta">Jul 22 2014</p>
+
+<div class="post">
+<p>I&#39;ve been at my current job, Grand Round Table, for about two months now and I am learning a lot. Our web application (and my main responsibility) uses <a href="https://angularjs.org">AngularJS</a> which I&#39;ve learned a lot about so far. I&#39;ve been intrigued by the framework for a while now and am excited to get to work on it in a meaningful way. At my <a href="https://github.com/CityOfPhiladelphia">previous job</a> we wrote our web apps in <a href="http://backbonejs.org">Backbone</a>. Simply put, in comparision, Angular is awesome. Here are some of the aspects of it that I like so far.  </p>
+
+<ol>
+<li><p>The main thing I&#39;ve noticed about Angular is that it gives you all of the components that you need including services, injectors, controllers, scopes, filters and a lot more. It gives you so much freedom and tools, in fact, that I imagine that if you&#39;re doing something in Angular that seems awkward, you should probably think about how you are architecturing your app. Services in particular have been great for me. Basically they are singleton objects that lazily instantiated when they are needed. This allows you to inject them (more on that later) wherever you need them and you&#39;ll know that you are always using the exact same object. Because of this they are great for sharing state across different components. In the past I have had to create Backbone models that do something similar and that is pretty easy to do, but Angular has functionality for them right out the box.  </p></li>
+<li><p>The documentation and community are top notch. I&#39;ve found that this is becoming increasingly important with any technology and if I wasn&#39;t lazy I could show you some Google search chart that shows AngularJS on the uptick. Stack Overflow is helping me find the answers that I need quickly, but it goes beyond that. Often errors in Angular will log to the console a URL that will explain the error in more detail. In most cases this has helped me solve the problem pretty quickly.  </p>
+
+<p>Additionally, the actual documentation on the website is very thorough and includes testing example, such as <a href="https://docs.angularjs.org/guide/services">here</a>. That is awesome.  </p>
+
+<p>And I shouldn&#39;t forget to mention that Angular is the only web framework in Philadelphia to have <a href="http://www.meetup.com/Angular-Philly">a Meetup group</a> (thx <a href="http://rjmetrics.com">RJ Metrics</a>!).</p></li>
+<li><p>I don&#39;t know if I completely understand the right way to use directives yet, but they are extremely powerful. Basically, as I understand them, they allow you to create custom HTML elements that can perform their own interactions with optional access to methods and data on other components like a controller. Conceptually they seem similar to web components (<a href="http://www.polymer-project.org/">Polymer</a> being an example library) that are modular, isolated pieces of code. This makes them easily shareable and reusable like the sharing of modules in the NodeJS ecosystem.</p>
+
+<p>One great example of this is the <a href="http://angular-ui.github.io/bootstrap">UI Bootstrap</a> project, which has created Angular directives for the Bootstrap JavaScript components. We&#39;re using the <a href="http://angular-ui.github.io/bootstrap/#/pagination">pagination</a> directive in our app at Grand Round Table and it&#39;s saving us a lot of time. I&#39;ve been really suprised by how many quality custom directives there are, <a href="http://www.elasticui.com">like this Elasticsearch one</a> and the <a href="http://thomasstreet.com/blog/famous-angular/2014/04/28/famous-angular.html">this Famo.us implementation</a> which again points back to the quality of the community around Angular. The framework also comes with a collection of filters out of the box like <code>ng-repeat</code>, <code>ng-selected</code>, <code>ng-model</code> and a lot more that solve a lot of common problems easily.  </p></li>
+<li><p>I&#39;ve grown to really like a more expressive HTML document. When non-Angular users talk about Angular, they usually talk about how it feels &quot;gross&quot; to have JavaScript and custom elements in their HTML. Once you can get over the inital hurdle of doing something &quot;weird&quot;, you can start to see the benefits. In Angular it seems that a sign of a well designed app is that you can get a gist of what it does by reading the HTML. A well-named <a href="https://docs.angularjs.org/api/ng/filter/filter">filter</a>, for example, can allow you to see what it is doing without reading the code because you&#39;re piping some expression of data to it. A jQuery-based app may be structured differently: you add custom classes to your HTML elements that have nothing to do with CSS styling but are used by jQuery to select elements and do something to them. So you&#39;ve got your HTML in one or more pages (since you should be using templates/partials at some point) and then your JavaScript in a bunch of other files and you&#39;re flipping back and forth, trying to keep it all straight in your mind. How is this beneficial?  </p></li>
+<li><p>In Angular, testing is important and there are tools built into the framework to help you with it: mainly <a href="https://github.com/angular/angular.js/wiki/Understanding-Dependency-Injection">dependency injection</a>. Also, as I mentioned above, the documentation includes testing examples and Angular plays well with BDD/TDD unit testing tools like Mocha or Jasmine. Beyond that the Angular team has created <a href="https://github.com/angular/protractor">Protractor</a>, an end-to-end testing framework that is pretty impressive. It allows you to create a test that performs interactions on your application, like using a login page. We don&#39;t have E2E tests yet at GRT, but I&#39;m working on it.  </p></li>
+</ol>
+
+<p>There&#39;s a ton of other good things about Angular that I&#39;m not mentioning and I suggest you give it a try. Coming from Backbone it&#39;s really a breath of fresh air to use a fully fleshed-out framework that gives you tools for everything that you may come across. This really isn&#39;t a knock on Backbone though as it doesn&#39;t seem to intend to be a full framework but rather a few well-composed components that can be used in a variety of ways (for good and evil). If you look at the <a href="http://backbonejs.org/#changelog">changelog for Backbone</a> the updates are pretty minor at this point as the framework is pretty much completed. It still holds a place and the excellent <a href="http://marionettejs.com">MarionetteJS</a> makes many things easier for you.  </p>
+
+<p>I&#39;m sure eventually something better will come along and <a href="http://emberjs.com">EmberJS</a> and <a href="https://github.com/swannodette/om">Om</a> look like promising tools that I want to check out at some point. But for now, Angular is making my life easier.</p>
+
+
+<a href="http://github.com/davewalk/davewalk.net/tree/master/_posts/2013-07-22-angularjs.md">Send a pull request for this post on GitHub.</a>
+</div>
+
+
+          <div class="footer">
+            <p>Copyright &copy; 2014 Dave Walk</p>
+          </div>
+        </div>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-23229923-10', 'davewalk.net');
+          ga('send', 'pageview');
+        </script>
+    </body>
+</html>
